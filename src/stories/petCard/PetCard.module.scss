@@ -1,0 +1,40 @@
+.root {
+    border: 1px solid var(--neutral-gray-4dfdfdf);
+    border-radius: 16px;
+    width: 100%;
+    user-select: none;
+}
+
+.imageWrapper {
+    height: 159px;
+    position: relative;
+
+    & img {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        object-fit: cover;
+    }
+}
+
+.infoWrapper {
+    padding: 16px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & svg {
+        cursor: pointer;
+    }
+}
+
+.favoriteIcon.favorite {
+    & svg * {
+        fill: var(--primary)
+    }
+}

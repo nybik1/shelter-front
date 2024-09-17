@@ -1,0 +1,160 @@
+.button {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--primary);
+    color: var(--white);
+    font-family: inherit;
+    outline: none;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 400;
+
+    & .icon {
+        width: 24px;
+        height: 24px;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &.leftIcon {
+            margin-right: 8px;
+        }
+
+        &.rightIcon {
+            margin-left: 8px;
+        }
+    }
+
+    &:disabled {
+        & .icon {
+            svg * {
+                fill: var(--neutral-gray-6868686);
+            }
+        }
+    }
+
+    &:hover {
+        background: var(--primary-400);
+        cursor: pointer;
+    }
+
+    &:active {
+        background: var(--primary-800);
+    }
+
+    &:disabled {
+        background: var(--neutral-gray-3ededed);
+        color: var(--neutral-gray-6868686);
+    }
+
+    &.secondary {
+        background: var(--white);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+
+        & .icon {
+            svg * {
+                fill: var(--primary);
+            }
+        }
+
+        &:hover {
+            border-color: var(--primary-400);
+            color: var(--primary-400);
+
+            & .icon {
+                svg * {
+                    fill: var(--primary-400);
+                }
+            }
+        }
+
+        &:active {
+            border-color: var(--primary-800);
+            color: var(--primary-800);
+
+            & .icon {
+                svg * {
+                    fill: var(--primary-800);
+                }
+            }
+        }
+
+        &:disabled {
+            border-color: var(--neutral-gray-5cbcbcb);
+            color: var(--neutral-gray-5cbcbcb);
+
+            & .icon {
+                svg * {
+                    fill: var(--neutral-gray-6868686);
+                }
+            }
+        }
+    }
+
+    &.ghost {
+        border: none;
+        background-color: var(--white);
+        color: var(--primary);
+
+        & .icon {
+            svg * {
+                fill: var(--primary);
+            }
+        }
+
+        &:hover {
+            color: var(--primary-400);
+
+            & .icon {
+                svg * {
+                    fill: var(--primary-400);
+                }
+            }
+        }
+
+        &:active {
+            color: var(--primary-800);
+
+            & .icon {
+                svg * {
+                    fill: var(--primary-800);
+                }
+            }
+        }
+
+        &:disabled {
+            color: var(--neutral-gray-6868686);
+
+            & .icon {
+                svg * {
+                    fill: var(--neutral-gray-6868686);
+                }
+            }
+        }
+    }
+
+    &.large {
+        padding: 18px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &.small {
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 400;
+
+        & .icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+
+}
